@@ -1,0 +1,84 @@
+# customers list
+
+GET 127.0.0.1:8000/customers/
+
+###
+
+# customer detail by "id"
+
+GET 127.0.0.1:8000/customers/2
+
+
+###
+
+# create a cumtomer
+
+POST 127.0.0.1:8000/customers/
+Content-Type: application/json
+
+{
+  "name" : "skdjgh",
+  "phone" : "00000000000",
+  "address" : "example"
+}
+
+###
+
+# only update customer ststus by "id"
+
+POST http://127.0.0.1:8000/customers/3/change_status/
+Content-Type: application/json
+
+{
+  "status" : "new"
+}
+
+
+###
+
+# update some fields of a customer by "id"
+
+PATCH http://127.0.0.1:8000/customers/1/
+Content-Type: application/json
+
+{
+  "status" : "contacted"
+}
+
+###
+
+# update all fields of a customer by "id"
+
+PUT http://127.0.0.1:8000/customers/2/
+Content-Type: application/json
+
+{
+  "name" : "hossein",
+  "phone" : "09334403225",
+  "address" : "example1",
+  "status" : "customer",
+  "notes" : "example1"
+}
+
+###
+
+# delete a customer by "id"
+
+DELETE http://127.0.0.1:8000/customers/2/
+
+###
+
+# endpoints documentation
+
+GET http://127.0.0.1:8000/api/docs/
+
+###
+
+# submit a note for customer by "id"
+
+DELETE http://127.0.0.1:8000/customers/1/notes/
+Content-Type: application/json
+
+{
+  "note" : "seller"
+}
