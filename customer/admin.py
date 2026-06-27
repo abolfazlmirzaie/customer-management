@@ -12,3 +12,5 @@ class CustomerAdmin(admin.ModelAdmin):
     list_filter = ['status']
     search_fields = ['name', 'email']
     inlines = [NoteInline]
+
+
