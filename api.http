@@ -82,3 +82,17 @@ Content-Type: application/json
 {
   "note" : "seller"
 }
+
+
+###
+
+POST http://127.0.0.1:8000/customers/telegram/
+Content-Type: application/json
+
+{
+  "name": "abolfazl",
+  "phone": "00000000000",
+  "address": "test",
+  "message": "test",
+  "telegram_id": "637964654"
+}
